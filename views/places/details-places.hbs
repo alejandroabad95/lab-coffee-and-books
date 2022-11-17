@@ -1,0 +1,17 @@
+<h3>{{place.name}}</h3>
+
+<p>Tipo de establecimiento: {{place.type}}</p>
+
+<div class="btn-group">
+    <a href="/lugares/{{place.id}}/editar" class="btn btn-warning btn-sm">Edit</a>
+    <form action="/lugares/{{place.id}}/eliminar" method="POST">
+        <input type="submit" value="Eliminar" class="btn btn-danger">
+    </form>
+</div>
+
+<figure id="myMap"></figure>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/placesMap.js"></script>
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNyp4K6iJWBF1yJuZgRxJVcJlFiz5qXWk&callback=init"></script>

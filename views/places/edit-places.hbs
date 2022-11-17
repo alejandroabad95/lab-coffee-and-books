@@ -1,0 +1,28 @@
+<h1>Editar {{place.name}}</h1>
+<hr>
+<form action="/lugares/{{place.id}}/editar" method="POST">
+
+    <div class="row">
+
+        <div class="col">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{place.name}}">
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="mb-3">
+                <label for="type" class="form-label">Tipo de establecimiento</label>
+                <input type="text" class="form-control" id="occupation" name="occupation" value={{place.type}}>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="d-grid mt-5">
+        <button type="submit" class="btn btn-dark btn-lg">Actualizar lugar</button>
+    </div>
+</form>
